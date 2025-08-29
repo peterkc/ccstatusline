@@ -14,6 +14,7 @@
     "start": "bun run src/ccstatusline.ts",
     "build": "rm -rf dist/* ; bun build src/ccstatusline.ts --target=node --outfile=dist/ccstatusline.js --target-version=14",
     "postbuild": "bun run scripts/replace-version.ts",
+    "compile": "rm -rf dist/* && bun build src/ccstatusline.ts --target=bun --outfile=dist/ccstatusline --compile",
     "example": "cat scripts/payload.example.json | bun start",
     "prepublishOnly": "bun run build",
     "lint": "bun tsc --noEmit; eslint . --config eslint.config.js --max-warnings=999999 --fix",
